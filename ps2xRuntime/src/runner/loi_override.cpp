@@ -2,7 +2,7 @@
 #include "ps2_runtime.h"
 
 static void ApplyLoIOverride(PS2Runtime& runtime) {
-    // Привязываем адрес V-Blank к нативной реализации
+    // Bind V-Blank address to native implementation
     ps2_game_overrides::bindAddressHandler(runtime, 0x006E5380, "sceGsSyncVCallback");
 }
 
